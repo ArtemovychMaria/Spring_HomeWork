@@ -1,5 +1,6 @@
 package com.example.SpringHomeWork;
 
+import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -21,11 +22,8 @@ public class StudentDao implements CRUD {
     }
 
     @Override
-    public void readAll() {
-        Iterator<Student> iterator = students.iterator();
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
+    public List<Student> readAll() {
+        return students;
     }
 
     @Override
@@ -36,5 +34,10 @@ public class StudentDao implements CRUD {
     @Override
     public void delete(int id) {
         students.remove(id-1);
+    }
+
+    @PreDestroy
+    private void cleanUp(){
+        System.out.println("I've done it");
     }
 }
