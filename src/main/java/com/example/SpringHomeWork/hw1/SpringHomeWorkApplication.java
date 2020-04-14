@@ -12,7 +12,7 @@ public class SpringHomeWorkApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringHomeWorkApplication.class, args);
 
-		StudentDao studentDao = (StudentDao) applicationContext.getBean("Dao");
+		StudentDao studentDao = (StudentDao) applicationContext.getBean("getStudentDao");
 
 		System.out.println(studentDao.create(new Student("Petro",14)));
 		System.out.println(studentDao.create(new Student("Ivan",19)));
