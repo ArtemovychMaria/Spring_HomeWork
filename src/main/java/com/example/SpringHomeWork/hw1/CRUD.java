@@ -1,4 +1,4 @@
-package com.example.SpringHomeWork;
+package com.example.SpringHomeWork.hw1;
 
 
 import java.util.List;
