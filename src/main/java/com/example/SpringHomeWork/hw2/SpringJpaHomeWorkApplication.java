@@ -20,7 +20,9 @@ public class SpringJpaHomeWorkApplication {
 		System.out.println(universityService.readById(2).get());
 		universityService.readAll().forEach(x-> System.out.println(x));
 
-		universityService.update("LP",1);
+		universityService.updateName("LP",1);
+		universityService.updateNumberOfStudents(3520,1);
+		universityService.updateNumberOfInstitutes(30,1);
 
 		universityService.deleteById(2);
 

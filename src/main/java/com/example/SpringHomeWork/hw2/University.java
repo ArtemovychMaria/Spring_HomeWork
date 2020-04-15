@@ -10,7 +10,7 @@ public class University {
     int id;
     String name;
     int level;
-    @Column(name = "number_of_insitutes")
+    @Column(name = "number_of_institutes")
     int numberOfInstitutes;
     @Column(name = "number_of_students")
     int numberOfStudents;

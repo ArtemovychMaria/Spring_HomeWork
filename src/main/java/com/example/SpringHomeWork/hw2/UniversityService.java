@@ -27,8 +27,16 @@ public class UniversityService {
         return universityRepository.findAll();
     }
 
-    public void update(String name,int id){
+    public void updateName(String name,int id){
         universityRepository.updateNameById(name,id);
+    }
+
+    public void updateNumberOfStudents(int numberOfStudents,int id){
+        universityRepository.updateNumberOfStudentsById(numberOfStudents,id);
+    }
+
+    public void updateNumberOfInstitutes(int numberOfInstitutes,int id){
+        universityRepository.updateNumberOfInstitutesById(numberOfInstitutes,id);
     }
 
     public void deleteById(int id){
